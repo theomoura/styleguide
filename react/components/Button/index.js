@@ -6,7 +6,7 @@ import Spinner from '../Spinner'
 class Button extends Component {
   handleClick = event => {
     !this.props.disabled && this.props.onClick && this.props.onClick(event)
-  };
+  }
 
   render() {
     const {
@@ -22,6 +22,11 @@ class Button extends Component {
 
     let classes = 'vtex-button bw1 ba fw5 ttu br2 fw4 v-mid relative '
     let loaderSize = 15
+
+    const spinnerWrapColor =
+      variation === 'primary' || variation === 'danger'
+        ? 'white'
+        : 'c-action-primary'
 
     classes += icon ? 'icon-button dib ' : ''
 
@@ -49,7 +54,8 @@ class Button extends Component {
         if (disabled) {
           classes += 'bg-disabled b--disabled c-on-disabled '
         } else {
-          classes += 'bg-action-primary b--action-primary c-on-action-primary hover-bg-action-primary hover-b--action-primary hover-c-on-action-primary '
+          classes +=
+            'bg-action-primary b--action-primary c-on-action-primary hover-bg-action-primary hover-b--action-primary hover-c-on-action-primary '
         }
         break
       }
@@ -57,7 +63,8 @@ class Button extends Component {
         if (disabled) {
           classes += 'bg-disabled b--disabled c-on-disabled '
         } else {
-          classes += 'bg-action-secondary b--action-secondary c-on-action-secondary hover-bg-action-secondary hover-b--action-secondary hover-c-on-action-secondary '
+          classes +=
+            'bg-action-secondary b--action-secondary c-on-action-secondary hover-bg-action-secondary hover-b--action-secondary hover-c-on-action-secondary '
         }
         break
       }
@@ -65,7 +72,8 @@ class Button extends Component {
         if (disabled) {
           classes += 'bg-transparent b--transparent c-disabled '
         } else {
-          classes += 'bg-transparent b--transparent c-action-primary hover-b--transparent hover-c-action-primary '
+          classes +=
+            'bg-transparent b--transparent c-action-primary hover-b--transparent hover-c-action-primary '
         }
         break
       }
@@ -73,7 +81,8 @@ class Button extends Component {
         if (disabled) {
           classes += 'bg-disabled b--disabled c-on-disabled '
         } else {
-          classes += 'bg-danger b--danger c-on-danger hover-bg-danger hover-b--danger hover-c-on-danger '
+          classes +=
+            'bg-danger b--danger c-on-danger hover-bg-danger hover-b--danger hover-c-on-danger '
         }
         break
       }
@@ -107,19 +116,18 @@ class Button extends Component {
         ref={this.props.ref}
         style={icon ? { fontSize: 0 } : {}}
       >
-        {isLoading
-          ? <React.Fragment>
+        {isLoading ? (
+          <React.Fragment>
             <span
-              className="left-0 w-100 absolute flex justify-center items-baseline"
+              className={`left-0 w-100 absolute flex justify-center items-baseline ${spinnerWrapColor}`}
             >
-              <Spinner
-                secondary={variation === 'primary' || variation === 'danger'}
-                size={loaderSize}
-              />
+              <Spinner color="currentColor" size={loaderSize} />
             </span>
             <span style={{ opacity: 0 }}>{children}</span>
           </React.Fragment>
-          : children}
+        ) : (
+          children
+        )}
       </Tag>
     )
   }
