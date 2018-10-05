@@ -1,6 +1,7 @@
 Search
 
 ```js
+const InputSearch = require('../../InputSearch').default
 initialState = { value1: '', value2: '', value3: '' }
 ;<div>
   <form

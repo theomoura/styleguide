@@ -1,6 +1,7 @@
 Search
 
 ```js
+const PasswordInput = require('../../PasswordInput').default
 initialState = { value1: 'Passw0rd', value2: 'Passw0rd', value3: 'Passw0rd' }
 ;<div>
   <form
@@ -10,7 +11,10 @@ initialState = { value1: 'Passw0rd', value2: 'Passw0rd', value3: 'Passw0rd' }
       console.log(state.value1)
     }}
   >
-    <PasswordInput value={state.value1} onChange={e => setState({ value1: e.target.value })} />
+    <PasswordInput
+      value={state.value1}
+      onChange={e => setState({ value1: e.target.value })}
+    />
   </form>
 
   <form

@@ -1,7 +1,8 @@
 Sizes
 
 ```js
-<div>
+const Input = require('../../Input').default
+;<div>
   <div className="mb5">
     <Input
       placeholder="Default with data-attributes"
@@ -23,6 +24,7 @@ Sizes
 Variations
 
 ```js
+const Input = require('../../Input').default
 const IconHelp = require('../icon/Help').default
 ;<div className="w-40">
   <div className="mb5">
@@ -91,18 +93,19 @@ const IconHelp = require('../icon/Help').default
 Using ref
 
 ```js
-  this.input = React.createRef()
+const Input = require('../../Input').default;
+this.input = React.createRef()
 
-  const handleFocusClick = () => {
-    this.input.current.focus()
-  }
+const handleFocusClick = () => {
+  this.input.current.focus()
+}
 
-  <div>
-    <Input ref={this.input} placeholder="Placeholder" label="Click on the button below to focus on this input" />
-    <div className="pt2">
-      <Button size="small" onClick={handleFocusClick}>
-        Focus on input
-      </Button>
-    </div>
+<div>
+  <Input ref={this.input} placeholder="Placeholder" label="Click on the button below to focus on this input" />
+  <div className="pt2">
+    <Button size="small" onClick={handleFocusClick}>
+      Focus on input
+    </Button>
   </div>
+</div>
 ```

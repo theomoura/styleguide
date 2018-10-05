@@ -7,11 +7,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [7.1.1] - 2018-10-04
-### Added
-- `IconBars`, `IconUser` and `IconShoppingCart` components
+## [7.1.2] - 2018-10-05
 
-## [7.1.0] - 2018-10-03
+### Fixed
+
+- `import`s in readme files
+
+## [7.1.1] - 2018-10-04
+
+### Added
+
+- `IconBars`, `IconUser` and `IconShoppingCart` components
 
 ## [7.1.0] - 2018-10-03
 
