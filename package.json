@@ -51,6 +51,7 @@
     "watch": "^1.0.2"
   },
   "dependencies": {
+    "react-jsonschema-form": "^1.0.5",
     "react-responsive-modal": "^2.0.1",
     "react-virtualized": "^9.19.1",
     "vtex-tachyons": "^2.7.0"
