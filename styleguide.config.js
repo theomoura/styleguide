@@ -31,6 +31,10 @@ module.exports = {
       content: './docs/introduction.md',
     },
     {
+      name: 'Design Tokens',
+      content: './docs/design-tokens.md',
+    },
+    {
       name: 'Components',
       content: './docs/components.md',
       components: 'react/components/**/index.js',

@@ -4,12 +4,6 @@
 
 # Getting started
 
-## Styles
-
-VTEX Styleguide uses [VTEX Tachyons](https://vtex.github.io/vtex-tachyons/) as our CSS framework.
-
-**To do:** create a better documentation for our CSS framework to live inside this Styleguide page.
-
 ## Install
 
 ```sh
