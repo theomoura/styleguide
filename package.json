@@ -63,6 +63,7 @@
   "dependencies": {
     "react-datepicker": "^2.0.0",
     "react-docgen-displayname-handler": "^2.1.1",
+    "react-overlays": "^1.1.1",
     "react-responsive-modal": "^2.0.1",
     "react-virtualized": "^9.19.1",
     "vtex-tachyons": "^2.10.0"
