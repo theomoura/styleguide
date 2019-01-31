@@ -115,7 +115,6 @@ module.exports = {
             'react/components/InputPassword/index.js',
             'react/components/InputSearch/index.js',
             'react/components/InputCurrency/index.js',
-            'react/components/Filter/index.js',
             'react/components/MultiSelect/index.js',
             'react/components/NumericStepper/index.js',
             'react/components/RadioGroup/index.js',
@@ -159,6 +158,7 @@ module.exports = {
           components: [
             'react/components/EXPERIMENTAL_Conditions/index.js',
             'react/components/EXPERIMENTAL_Select/index.js',
+            'react/components/EXPERIMENTAL_Filter/index.js',
           ],
         },
       ],

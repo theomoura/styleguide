@@ -128,7 +128,7 @@ class Menu extends Component {
                 ? `transform 50ms ease-out, opacity 25ms`
                 : 'none',
             }}
-            className={`absolute z-999 ba b--muted-4 br2 shadow-5 ${
+            className={`absolute z-999 ba b--muted-4 br2 shadow-5 bg-base ${
               isRight ? 'right-0' : 'left-0'
             }
             ${isVisible ? 'o-100' : 'o-0'}`}>
